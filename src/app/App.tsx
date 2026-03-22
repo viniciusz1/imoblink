@@ -1,19 +1,11 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { LoginScreen } from './components/login-screen';
-import { PropertiesScreen } from './components/properties-screen';
-import { DashboardScreen } from './components/dashboard-screen';
-import { ThemeProvider } from './components/theme-provider';
+import { RouterProvider } from "react-router-dom";
+import { ThemeProvider } from "./components/theme-provider";
+import { router } from "./routes";
 
 export default function App() {
   return (
     <ThemeProvider>
-      <BrowserRouter basename="/imoblink">
-        <Routes>
-          <Route path="/" element={<LoginScreen />} />
-          <Route path="/imoveis" element={<PropertiesScreen />} />
-          <Route path="/dashboard" element={<DashboardScreen />} />
-        </Routes>
-      </BrowserRouter>
+      <RouterProvider router={router} />
     </ThemeProvider>
   );
 }

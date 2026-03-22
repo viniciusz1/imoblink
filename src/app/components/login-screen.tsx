@@ -1,24 +1,24 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Input } from './ui/input';
-import { Label } from './ui/label';
-import { Button } from './ui/button';
-import { Lock, User } from 'lucide-react';
-import { ThemeToggle } from './theme-toggle';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Input } from "./ui/input";
+import { Label } from "./ui/label";
+import { Button } from "./ui/button";
+import { Lock, User } from "lucide-react";
+import { ThemeToggle } from "./theme-toggle";
 
 export function LoginScreen() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (username === 'admin' && password === 'admin') {
-      navigate('/imoveis');
+    if (username === "admin" && password === "admin") {
+      navigate("/imoveis");
     } else {
-      setError('Usuário ou senha incorretos');
+      setError("Usuário ou senha incorretos");
     }
   };
 
@@ -60,7 +60,7 @@ export function LoginScreen() {
                   value={username}
                   onChange={(e) => {
                     setUsername(e.target.value);
-                    setError('');
+                    setError("");
                   }}
                   className="pl-10 bg-white/10 border-white/30 text-white placeholder:text-white/40 focus:border-[#2ECC71] focus:ring-[#2ECC71]"
                   placeholder="Digite seu usuário"
@@ -82,7 +82,7 @@ export function LoginScreen() {
                   value={password}
                   onChange={(e) => {
                     setPassword(e.target.value);
-                    setError('');
+                    setError("");
                   }}
                   className="pl-10 bg-white/10 border-white/30 text-white placeholder:text-white/40 focus:border-[#2ECC71] focus:ring-[#2ECC71]"
                   placeholder="Digite sua senha"
@@ -105,7 +105,7 @@ export function LoginScreen() {
                 className="text-sm text-[#2ECC71] hover:text-[#2ECC71]/80 transition-colors"
                 onClick={(e) => {
                   e.preventDefault();
-                  console.log('Forgot password clicked');
+                  console.log("Forgot password clicked");
                 }}
               >
                 Esqueceu a senha?
@@ -124,13 +124,13 @@ export function LoginScreen() {
           {/* Footer */}
           <div className="mt-6 text-center">
             <p className="text-sm text-white/70">
-              Não tem uma conta?{' '}
+              Não tem uma conta?{" "}
               <a
                 href="#"
                 className="text-[#2ECC71] hover:text-[#2ECC71]/80 transition-colors font-semibold"
                 onClick={(e) => {
                   e.preventDefault();
-                  console.log('Sign up clicked');
+                  console.log("Sign up clicked");
                 }}
               >
                 Cadastre-se
