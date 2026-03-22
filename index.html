@@ -5,6 +5,18 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>ImobLink</title>
+      <!-- Handle SPA redirects from 404.html on GitHub Pages -->
+      <script>
+        (function(){
+          var redirect = sessionStorage.getItem('redirect');
+          if (redirect) {
+            sessionStorage.removeItem('redirect');
+            if (redirect !== location.href) {
+              history.replaceState(null, '', redirect);
+            }
+          }
+        })();
+      </script>
     </head>
 
     <body>
