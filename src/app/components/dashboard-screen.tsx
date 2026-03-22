@@ -382,7 +382,7 @@ export function DashboardScreen() {
       <header className="bg-[#0A4F6E] dark:bg-[#072a3d] text-white shadow-lg sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <h1 className="text-3xl font-bold">ImobLink</h1>
+            <h1 className="text-3xl font-bold">ImoveLink</h1>
           </div>
           <div className="flex items-center gap-3">
             <Button

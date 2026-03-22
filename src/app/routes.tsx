@@ -18,5 +18,5 @@ export const router = createBrowserRouter(
       Component: DashboardScreen,
     },
   ],
-  { basename: "/imoblink" }
+  { basename: "/imovelink" }
 );

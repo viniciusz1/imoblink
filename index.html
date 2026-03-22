@@ -1,27 +1,25 @@
-
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>ImobLink</title>
-      <!-- Handle SPA redirects from 404.html on GitHub Pages -->
-      <script>
-        (function(){
-          var redirect = sessionStorage.getItem('redirect');
-          if (redirect) {
-            sessionStorage.removeItem('redirect');
-            if (redirect !== location.href) {
-              history.replaceState(null, '', redirect);
-            }
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ImoveLink</title>
+    <!-- Handle SPA redirects from 404.html on GitHub Pages -->
+    <script>
+      (function () {
+        var redirect = sessionStorage.getItem("redirect");
+        if (redirect) {
+          sessionStorage.removeItem("redirect");
+          if (redirect !== location.href) {
+            history.replaceState(null, "", redirect);
           }
-        })();
-      </script>
-    </head>
+        }
+      })();
+    </script>
+  </head>
 
-    <body>
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-    </body>
-  </html>
-  
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

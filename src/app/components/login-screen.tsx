@@ -41,7 +41,7 @@ export function LoginScreen() {
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-white/20">
           {/* Logo e título */}
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-white mb-4">ImobLink</h1>
+            <h1 className="text-4xl font-bold text-white mb-4">ImoveLink</h1>
             <p className="text-[#2ECC71]/80">Bem-vindo de volta</p>
           </div>
 
