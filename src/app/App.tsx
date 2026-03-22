@@ -7,7 +7,7 @@ import { ThemeProvider } from './components/theme-provider';
 export default function App() {
   return (
     <ThemeProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/imoblink">
         <Routes>
           <Route path="/" element={<LoginScreen />} />
           <Route path="/imoveis" element={<PropertiesScreen />} />
